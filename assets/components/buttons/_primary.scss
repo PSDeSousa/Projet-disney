@@ -1,0 +1,16 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/extends' as *;
+@use '../../abstracts/mixins' as *;
+@use '../../abstracts/colors' as *;
+@use '../../abstracts/typography' as *;
+// Primary-button
+.primary-button{
+    @include center-column;
+    @include button-style;
+    width:19.25rem;
+    height:4.25rem;
+    p{
+        margin:0;
+        line-height:1rem;
+    }
+}

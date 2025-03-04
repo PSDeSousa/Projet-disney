@@ -1,0 +1,34 @@
+// Typos
+@use '../abstracts/variables' as *;
+@use '../abstracts/extends' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as *;
+@use '../abstracts/typography' as *;
+// Titre et paragraphes
+h1{
+    @include title-style($secondary-color,$primary-font,3.5rem);
+}
+h2{
+    @include title-style;
+}
+h3{
+    @include title-style($secondary-color,$secondary-font,1.7rem);
+}
+p{
+    @include title-style($terciary-color,$secondary-font,1rem);
+}
+//.comments dans P ko ?
+.comments{
+    font-size:0.75rem;
+}
+.higher-text{
+    @include title-style($secondary-color,$secondary-font,1.25rem);
+}
+/**
+**************** Desktop **************************
+**/
+@media (min-width: 769px){
+    h1{
+        @include title-style($secondary-color,$primary-font,2.7rem);
+    }
+}

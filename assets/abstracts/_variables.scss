@@ -1,0 +1,10 @@
+// Variables
+$row-space:3rem;
+$text-space:0.5rem;
+/**
+**************** Desktop **************************
+**/
+@media (min-width: 769px){
+    $row-space:8rem;
+    $text-space:1.5rem;
+}

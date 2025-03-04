@@ -1,0 +1,123 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/extends' as *;
+@use '../../abstracts/mixins' as *;
+@use '../../abstracts/colors' as *;
+@use '../../abstracts/typography' as *;
+// card-pack
+.card-pack{
+    @include flex-line(space-between,center);
+    background-color:$btn-secondary-color;
+    position:relative;
+    border:none;
+    width:32rem;
+    height:17rem;
+    padding:1.8rem 1.8rem;
+    .content{
+        width:55%;
+        @include flex-column(space-between,start);
+        .logo{
+            justify-content: left;
+            margin:0;
+            gap:1rem;
+            img{
+                height:2.5rem;
+            }
+        }
+        h3{
+            text-align: left;
+            margin-bottom:0;
+        }
+        p{
+            text-align: left;
+            margin-top:0;
+            margin-bottom:$text-space;
+        }
+        ul:last-child{
+            margin-left:1rem;
+            li{
+                @include title-style($terciary-color,$secondary-font,1rem);
+                list-style-type:"✔ ";
+                text-align: left;
+                line-height: 1.5rem;
+            }
+        }
+    }
+    .cta{
+        //position:absolute;
+        //bottom:2.5rem;
+        //left:50%;
+        //transform:translatex(-50%);
+        align-items:start;
+        p{
+            text-align: left;
+            margin-top:$text-space;
+            margin-bottom:$text-space;
+            .higher-text{
+                text-align: left;
+            }
+        }
+        .primary-button{
+            width:18rem;
+            margin:0;
+        }
+    }
+}
+/**
+**************** Desktop **************************
+**/
+@media (min-width: 769px){
+    .card-pack{
+        @include flex-column(space-between,left);
+        background-color:$primary-color;
+        position:relative;
+        border:1px solid $secondary-color;
+        width:24rem;
+        height:33rem;
+        padding:2.5rem 2.8rem;
+        .content{
+            width:100%;
+            @include flex-column(space-between,left);
+            .logo{
+                justify-content: left;
+                margin:0;
+                gap:1rem;
+                img{
+                    height:2.5rem;
+                }
+            }
+            h3{
+                text-align: left;
+                margin-bottom:0;
+            }
+            p{
+                text-align: left;
+                margin-top:0;
+            }
+            ul:last-child{
+                margin-left:1rem;
+                li{
+                    @include title-style($terciary-color,$secondary-font,1rem);
+                    list-style-type:"✔ ";
+                    text-align: left;
+                }
+            }
+        }
+        .cta{
+            //position:absolute;
+            //bottom:2.5rem;
+            //left:50%;
+            //transform:translatex(-50%);
+            align-items:start;
+            p{
+                text-align: left;
+                .higher-text{
+                    text-align: left;
+                }
+            }
+            .primary-button{
+                width:18rem;
+                margin:0;
+            }
+        }
+    }
+}

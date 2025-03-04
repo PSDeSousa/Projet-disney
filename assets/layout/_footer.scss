@@ -1,0 +1,83 @@
+@use '../abstracts/typography' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/colors' as *;
+@use '../abstracts/mixins' as *;
+// Footer
+footer{
+    .foot{
+        @include title-style($terciary-color,$secondary-font,0.5rem);
+        width:94%;
+        @include title-style($terciary-color,$secondary-font,0.75rem);
+        //@include flex-line(space-evenly,top);
+        .row{
+            width:100%;
+            @include flex-line(space-between,start);
+        }
+        .floor{
+            width:100%;
+            @include flex-line(space-between,start);
+        }
+        .logo{
+            @include flex-column(start,start);
+            img{
+                width:5rem;
+            }
+            ul{
+                @include flex-line(space-between,center);
+                img{
+                    width:0.75rem;
+                }
+            }
+        }
+        P{
+            @include title-style($terciary-color,$secondary-font,0.75rem);
+        }
+        ul{
+            @include flex-column(start,start);
+            gap:$text-space;
+            li{
+                @include between-inside;
+                a{
+                    text-decoration:none;
+                    @include title-style($terciary-color,$secondary-font,0.75rem);
+                }
+                ul{
+                    gap:0.75rem;
+                }
+            }
+        }
+    }
+}
+/**
+**************** Desktop **************************
+**/
+@media (min-width: 769px){
+    footer{
+        .foot{
+            @include title-style($terciary-color,$secondary-font,0.75rem);
+            .logo{
+                @include center-column;
+                img{
+                    width:5rem;
+                }
+            }
+            P{
+                @include title-style($terciary-color,$secondary-font,0.75rem);
+            }
+            ul{
+                @include flex-line(center,center);
+                gap:$text-space;
+                li{
+                    @include flex-line(center,center);
+                    a{
+                        text-decoration:none;
+                        @include title-style($terciary-color,$secondary-font,0.75rem);
+                    }
+                    ul{
+                        gap:0.75rem;
+                    }
+                }
+            }
+        }
+    }
+}

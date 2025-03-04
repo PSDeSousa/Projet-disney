@@ -1,0 +1,20 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/extends' as *;
+@use '../../abstracts/mixins' as *;
+@use '../../abstracts/colors' as *;
+@use '../../abstracts/typography' as *;
+// Secondary-button
+.secondary-button{
+    @include center-inside;
+    @include button-style(21px,$btn-secondary-color,0,capitalize);
+    width:14.78rem;
+    height:3rem;
+    justify-content: start;
+    gap:0.6rem;
+    .secondary-sub-button{
+        @include center-inside;
+        @include button-style(19px,$btn-primary-color,0,capitalize);
+        width:8.5rem;
+        height:2.3rem;
+    }
+}

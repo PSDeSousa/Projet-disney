@@ -1,0 +1,19 @@
+@use '../abstracts/typography' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/colors' as *;
+@use '../abstracts/mixins' as *;
+// Header
+header{
+    .container-fluid{
+        position:absolute;
+        top:0;
+        nav{
+            width:94%;
+            margin-top: 0.6rem;
+            margin-bottom: 0.6rem;
+            display:flex;
+            justify-content: end;
+            align-items: center;
+        }
+    }
+}

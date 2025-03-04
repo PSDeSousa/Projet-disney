@@ -1,0 +1,51 @@
+// Mixins
+@use 'variables' as *;
+@use 'colors' as *;
+@use 'typography' as *;
+@use 'extends' as *;
+// Titles
+@mixin title-style($text-color:$secondary-color,$typo:$primary-font,$text-size:2.7rem){
+    color:$text-color;
+    font-family:$typo;
+    font-size:$text-size;
+    margin:1rem 0;
+    text-align:center;
+}
+// flex centre
+@mixin center-inside{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-column($justify,$align){
+    display:flex;
+    flex-direction:column;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin flex-line($justify,$align){
+    display:flex;
+    flex-direction:row;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin between-inside{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin center-column{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+//bouttons
+@mixin button-style($radius:4px,$bg-color:$btn-primary-color,$margin:0.75rem,$case:uppercase){
+    border-radius:$radius;
+    font-family:$secondary-font;
+    @include center-inside;
+    margin:$margin;
+    background-color:$bg-color;
+    text-transform:$case;
+}

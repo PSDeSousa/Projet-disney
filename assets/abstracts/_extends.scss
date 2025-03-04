@@ -1,0 +1,12 @@
+@use 'variables' as *;
+@use 'colors' as *;
+@use 'typography' as *;
+//Extends
+/**
+%center-inside
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+**/

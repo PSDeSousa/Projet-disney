@@ -1,0 +1,85 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/extends' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as *;
+@use '../abstracts/typography' as *;
+// Global
+body{
+    background-color:$primary-color;
+}
+// Classes
+.container-fluid{
+    width:100%;
+    margin:auto;
+    @include center-column;
+}
+.container{
+    width:70%;
+    margin:auto;
+    @include center-column;
+}
+.row{
+    width:100%;
+    margin-top:$row-space;
+    margin-bottom:$row-space;
+}
+.bloc{
+    @include center-column;
+}
+.gallery{
+    width:100%;
+    @include flex-line(center,center);
+    flex-wrap:wrap;
+    margin-top:$text-space;
+    margin-bottom:$text-space;
+    //gap:$text-space;
+    .item{
+        flex: 1 1 calc(33.33%);
+        padding:$text-space;
+    }
+    .item:first-child{
+        flex: 3 1 calc(100%);
+        padding:$text-space;
+    }
+}
+.line{
+    border-bottom:3px solid $secondary-color;
+}
+.cta{
+    @include center-column;
+    a{
+        text-decoration:none;
+        color:$secondary-color;
+    }
+}
+.carousel{
+    width:100%;
+    @include center-column;
+}
+.logo{
+    @include between-inside;
+    margin-top:$text-space;
+    margin-bottom:$text-space;
+    gap:$text-space;
+    list-style: none;
+}
+/**
+**************** Desktop **************************
+**/
+@media (min-width: 769px){
+    .container{
+        width:89%;
+        margin:auto;
+        @include center-column;
+    }
+    .gallery{
+        .item{
+            flex: 1 1 calc(33.33%);
+            padding:$text-space;
+        }
+        .item:first-child{
+            flex: 1 1 calc(33.33%);
+            padding:$text-space;
+        }
+    }
+}

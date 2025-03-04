@@ -1,0 +1,57 @@
+@use '../abstracts/typography' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/colors' as *;
+@use '../abstracts/mixins' as *;
+// Section plan
+.plan{
+    .bloc{
+        >.higher-text{
+            color:$terciary-color;
+            margin:0;
+        }
+        >.cta{
+            margin-top:2rem;
+            margin-bottom:2rem;
+        }
+    }
+    .bloc{
+        .gallery{
+            justify-content: center;
+            position:relative;
+            .arrow{
+                position:absolute;
+                top:40%;
+                width:120%;
+                @include between-inside;
+                a{
+                    img{
+                        height:1.5rem;
+                        background-color:$primary-color;
+                    }
+                }
+                a:first-child{
+                    transform:rotate(180deg);
+                }            
+            }
+        }
+        .info{
+            width:100%;
+            @include flex-line(start,center);
+            gap:$text-space;
+            p{
+                text-align: left;
+            }
+            P:last-child{
+                color:$secondary-color;
+            }
+        }
+    }
+}
+/**
+**************** Desktop **************************
+**/
+@media (min-width: 769px){
+    .gallery{
+        justify-content:space-evenly;
+    }
+}
