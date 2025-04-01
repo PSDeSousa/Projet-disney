@@ -1,5 +1,5 @@
-# APPLI-METEO
-Fichier appli meteo
+# Landing-page Disney
+Fichier Disney
 Bienvenue dans le projet **Disney**, un site web représentant une landing-page pour un service de vidéo en streaming Disney
 
 ## 🚀 Fonctionnalités
@@ -37,10 +37,6 @@ projet-mcdo/
 
 - [PSDeSousa](https://github.com/PSDeSousa)
 - Webecom promo 2025
-
-## 🌦️ API utilisée
-
-Cette application utilise les données météo fournies par l’API [Open-Meteo](https://open-meteo.com/).
 
 
 ## 📄 Licence
